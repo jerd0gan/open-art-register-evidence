@@ -2,7 +2,7 @@
 
 **Künstlerische Praxis wird auffindbar – und, wo freiwillig freigegeben, statistisch beschreibbar.**
 
-![Open Art Register Logo](site/assets/open-art-register-logo.png)
+<img src="site/assets/open-art-register-logo.png" alt="Open Art Register" width="60">
 
 ## Deutsch
 

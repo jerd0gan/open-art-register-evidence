@@ -1,7 +1,7 @@
 {
   "id": "OAR_PUBLIC_DEMO_EVIDENCE_V1",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T10:38:16+02:00",
+  "generatedAt": "2026-09-02T22:41:38+02:00",
   "claims": {
     "completeProductionSourceIncluded": false,
     "productionApplicationLogicIncluded": false,
@@ -60,7 +60,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "f9cf630d499463c9fdf9f7da51a882f9ac67539c5440c01e92bc7c0fa6fc8c4f"
+      "sha256": "3d245bd8d1417ff03dc639a4418f6c2edb03aca3aba4b14fe9afa4e19610f39c"
     },
     {
       "path": "package.json",
