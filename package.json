@@ -1,0 +1,16 @@
+{
+  "name": "open-art-register-public-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal public demo and evidence repository for Open Art Register.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test --test-reporter=tap tests/*.test.mjs",
+    "test:boundary": "node --test --test-reporter=tap tests/public-boundary.test.mjs",
+    "test:demo": "node --test --test-reporter=tap tests/demo-ui.test.mjs",
+    "test:health": "node --test --test-reporter=tap tests/public-health-contract.test.mjs"
+  }
+}

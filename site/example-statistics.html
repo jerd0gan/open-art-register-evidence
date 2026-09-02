@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Open Art Register – Beispiel Empirie</title>
+  <link rel="icon" type="image/png" href="./assets/open-art-register-logo.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./i18n.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero__main">
+        <img class="brand-logo brand-logo--hero" src="./assets/open-art-register-logo.png" alt="" aria-hidden="true" />
+        <p class="eyebrow" data-i18n="eyebrow">Open Art Register</p>
+        <h1 data-i18n="exampleTitle">Empirie – vollständige Beispielansicht</h1>
+        <p class="hero-copy" data-i18n="exampleIntro">Die Darstellung folgt der vorgesehenen OAR-Statistikoberfläche, verwendet aber ausschließlich synthetische Beispieldaten.</p>
+        <p class="example-note example-note--top" data-i18n="chartNote">Beispielansicht – in den Schaubildern werden keine echten Open-Art-Register-Daten verwendet.</p>
+      </div>
+      <nav class="top-controls" aria-label="Language selection">
+        <div class="top-controls__row">
+          <div class="segmented-control" aria-label="Language"><button id="langDeBtn" class="tiny is-active" type="button" data-lang="de" aria-pressed="true">DE</button><button id="langEnBtn" class="tiny" type="button" data-lang="en" aria-pressed="false">EN</button></div>
+          <button class="tiny" type="button" disabled data-i18n="themeDark">Dunkel</button><button class="tiny" type="button" disabled data-i18n="infoBtn">Info</button>
+        </div>
+        <button class="tiny accessibility-toggle" type="button" disabled data-i18n="accessibilityBtn">Barrierefreiheit</button>
+      </nav>
+    </header>
+
+    <div class="demo-tape demo-tape--shared" role="note">
+      <div class="demo-tape__track">
+        <span data-i18n="statsDemoTape">DEMOANSICHT · SIE KÖNNEN HIER NUR DE / EN AUSWÄHLEN · BEISPIEL / EXAMPLE</span>
+        <span aria-hidden="true" data-i18n="statsDemoTape">DEMOANSICHT · SIE KÖNNEN HIER NUR DE / EN AUSWÄHLEN · BEISPIEL / EXAMPLE</span>
+        <span aria-hidden="true" data-i18n="statsDemoTape">DEMOANSICHT · SIE KÖNNEN HIER NUR DE / EN AUSWÄHLEN · BEISPIEL / EXAMPLE</span>
+      </div>
+    </div>
+
+    <main class="statistics-demo-main">
+      <section class="card stats-card stats-card--example wide-card">
+        <div class="section-title"><div><p class="kicker" data-i18n="statsKicker">2 · Empirie</p><h2 data-i18n="statsTitle">Aggregierte Übersicht</h2></div><span class="synthetic-badge" data-i18n="exampleBadge">KEINE ECHTEN DATEN</span></div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><strong>100</strong><span data-i18n="statsEligibleProfiles">Insgesamt zugestimmte Statistikprofile</span></div>
+          <div class="stat-card"><strong>50</strong><span data-i18n="minForStats">Mindestprofile für Detailstatistik</span></div>
+        </div>
+
+        <div class="chart-list public-statistics-pies">
+          <section class="mini-chart pie-chart">
+            <h3 data-i18n="publicArtisticDisciplinesTitle">Statistisch freigegebene künstlerische Disziplinen</h3>
+            <div class="pie-chart__body">
+              <div class="pie-chart__graphic pie-disciplines" aria-hidden="true"></div>
+              <div class="pie-chart__legend">
+                <div class="pie-row"><span><i class="pie-row__swatch c1"></i><span data-i18n="discPainting">Malerei / Zeichnung / Grafik</span></span><b>28</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c2"></i><span data-i18n="discDigital">Digitale Kunst / Medienkunst / Code</span></span><b>21</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c3"></i><span data-i18n="discText">Literatur / Schreiben / Text</span></span><b>18</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c4"></i><span data-i18n="discSculpture">Skulptur / Objekt / Installation</span></span><b>14</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c5"></i><span data-i18n="discSound">Klang / Musik / Sound Art</span></span><b>11</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c6"></i><span data-i18n="discOther">Weitere freigegebene Zuordnungen</span></span><b>8</b></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mini-chart pie-chart">
+            <h3 data-i18n="publicPracticeAreaTitle">Verhältnis der Praxisbereiche</h3>
+            <div class="pie-chart__body">
+              <div class="pie-chart__graphic pie-practice-areas" aria-hidden="true"></div>
+              <div class="pie-chart__legend">
+                <div class="pie-row"><span><i class="pie-row__swatch c1"></i><span data-i18n="areaArt">Künstlerische Disziplinen</span></span><b>72</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c2"></i><span data-i18n="areaEducation">Kunst-/Vermittlung</span></span><b>12</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c3"></i><span data-i18n="areaCurating">Kuratieren</span></span><b>9</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c4"></i><span data-i18n="areaResearch">Künstlerische Forschung / Archiv</span></span><b>7</b></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <p class="muted discipline-note" data-i18n="publicDisciplineAssignmentNote">Mehrfachauswahl ist möglich. Der Disziplinkuchen zeigt statistisch freigegebene künstlerische Disziplinzuordnungen. Der Praxisbereichskuchen fasst die gewöhnlichen Disziplinen als „Künstlerische Disziplinen“ zusammen und zeigt Kunst-/Vermittlung, Kuratieren und Künstlerische Forschung / Archiv einzeln. Jedes Profil zählt höchstens einmal je Praxisbereich; Prozentwerte beziehen sich auf Zuordnungen, nicht auf eindeutige Personen. Gruppen unter fünf Profilen bleiben unterdrückt.</p>
+        <p class="muted authenticated-statistics-hint" data-i18n="authenticatedStatisticsHint">Weitere aggregierte Statistikansichten sind nur nach Anmeldung sichtbar. Die Schutzgrenzen 50 und 5 bleiben bestehen. In dieser Beispielansicht werden auch diese Fähigkeiten ausschließlich mit synthetischen Werten dargestellt.</p>
+
+        <div class="chart-list detail-statistics-grid">
+          <section class="mini-chart pie-chart">
+            <h3 data-i18n="chartActivity">Praxisaktivität</h3>
+            <div class="pie-chart__body compact-pie">
+              <div class="pie-chart__graphic pie-activity" aria-hidden="true"></div>
+              <div class="pie-chart__legend">
+                <div class="pie-row"><span><i class="pie-row__swatch c1"></i><span data-i18n="activePractice">Aktiv fortgeführt</span></span><b>64</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c3"></i><span data-i18n="pausedPractice">Pausiert / unregelmäßig</span></span><b>24</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c6"></i><span data-i18n="stoppedPractice">Nicht mehr aktiv</span></span><b>12</b></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mini-chart pie-chart">
+            <h3 data-i18n="chartPracticeScope">Praxisumfang</h3>
+            <div class="pie-chart__body compact-pie">
+              <div class="pie-chart__graphic pie-scope" aria-hidden="true"></div>
+              <div class="pie-chart__legend">
+                <div class="pie-row"><span><i class="pie-row__swatch c2"></i><span data-i18n="fullTime">Hauptberuflich</span></span><b>22</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c1"></i><span data-i18n="partTime">Teilberuflich</span></span><b>41</b></div>
+                <div class="pie-row"><span><i class="pie-row__swatch c5"></i><span data-i18n="hobby">Hobby</span></span><b>37</b></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mini-chart timeline-chart">
+            <div class="pilot-timeline">
+              <h3 data-i18n="monthlyTimelineTitle">Anmeldungen im Zeitverlauf</h3>
+              <p class="muted" data-i18n="monthlyTimelineNote">Anzahl der Anmeldungen pro Monat.</p>
+              <div class="pilot-timeline__dots">
+                <div class="pilot-month"><span class="pilot-month__dot">8</span><small>01/2027</small></div>
+                <div class="pilot-month"><span class="pilot-month__dot">13</span><small>02/2027</small></div>
+                <div class="pilot-month"><span class="pilot-month__dot">17</span><small>03/2027</small></div>
+                <div class="pilot-month"><span class="pilot-month__dot">21</span><small>04/2027</small></div>
+                <div class="pilot-month"><span class="pilot-month__dot">19</span><small>05/2027</small></div>
+                <div class="pilot-month"><span class="pilot-month__dot">22</span><small>06/2027</small></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <p class="example-note" data-i18n="aggregationExampleNote">Synthetische Demonstration: Die Beispielwerte dienen ausschließlich dazu, die statistische Darstellung vollständig sichtbar zu machen. Es findet keine Live-Abfrage statt.</p>
+      </section>
+    </main>
+
+    <footer><span data-i18n="footerText">Open Art Register · Nicht-kommerzielles Künstlerregister.</span><span data-i18n="exampleFooter">© 2026 Jeremias Erdogan · synthetische Beispielansicht</span></footer>
+  </div>
+</body>
+</html>

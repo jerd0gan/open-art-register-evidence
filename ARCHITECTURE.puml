@@ -1,0 +1,44 @@
+@startuml
+title Open Art Register — Public Demo & Evidence
+
+rectangle "Public Git Repository" {
+  component "README" as README
+  component "Static Homepage Demo" as HOME
+  component "Static Example Statistics" as STATS
+  component "DE / EN only" as I18N
+  component "Boundary Tests" as TESTS
+  component "Public Health Workflow" as GH
+}
+
+cloud "openartregister.art" as OAR
+database "Productive Database" as DB
+
+I18N --> HOME
+I18N --> STATS
+TESTS --> HOME : static validation
+TESTS --> STATS : synthetic-data boundary
+TESTS --> README : allowlist / hashes
+GH -> OAR : GET /api/health
+OAR -> DB : existing read-only health check
+OAR --> GH : sanitized {"ok":true} / fail
+
+note bottom of HOME
+Only DE/EN controls are interactive.
+Yellow viewport-fixed demo tape.
+All productive UI actions are disabled.
+No production application code.
+end note
+
+note bottom of STATS
+Synthetic example data only.
+Same yellow viewport-fixed tape.
+BEISPIEL / EXAMPLE additionally marked.
+end note
+
+note right of TESTS
+Fail closed:
+Unexpected files = FAIL
+All 6 production roots = FAIL
+Secrets / SQL / archives = FAIL
+end note
+@enduml

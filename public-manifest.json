@@ -1,0 +1,122 @@
+{
+  "id": "OAR_PUBLIC_DEMO_EVIDENCE_V1",
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-02T10:38:16+02:00",
+  "claims": {
+    "completeProductionSourceIncluded": false,
+    "productionApplicationLogicIncluded": false,
+    "onlyLanguageSwitchInteractiveInDemo": true,
+    "statisticsUsesSyntheticExampleDataOnly": true,
+    "publicHealthProbeLimitedToSanitizedEndpoint": true,
+    "publicDatabaseCredentialsIncluded": false,
+    "publicSqlExecution": false,
+    "publicDeployment": false,
+    "allowlistBoundaryFailClosed": true,
+    "homepageMirrorsProtectedStatisticsState": true,
+    "exampleStatisticsShowsFullSyntheticPresentation": true,
+    "visualDerivationPinnedToSourceOfTruthHashes": true,
+    "demoTapeVisibleOnHomepage": true,
+    "demoTapeVisibleOnStatisticsPage": true,
+    "demoTapeStatesLanguageOnlyInteraction": true,
+    "demoTapeGeometryIdenticalAcrossPages": true,
+    "demoTapeTopEdgeStartsAtFinalViewportThird": true,
+    "demoTapeOverhangPreserved": true,
+    "demoTapeShadowReduced": true,
+    "demoTapeClippingChange": false,
+    "demoTapeViewportFixed": true,
+    "demoTapeScrollsWithDocument": false,
+    "publicFileAlignmentComplete": true,
+    "documentationScreenshotsIncluded": false
+  },
+  "publicHealthProbe": {
+    "method": "GET",
+    "url": "https://openartregister.art/api/health",
+    "credentialsRequired": false,
+    "writes": false,
+    "outputFields": [
+      "DATABASE",
+      "READ_PATH",
+      "END_TO_END_MS",
+      "CHECKED_AT"
+    ],
+    "failureDatabaseState": "UNCONFIRMED"
+  },
+  "files": [
+    {
+      "path": ".github/workflows/public-health.yml",
+      "sha256": "bb06631cad89ffb1a656e81bac0781c503e76a7ee03d2878f33150e825b05624"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "9548e87be45ce3a8956ac14edb322d3ab805fed4a17828c5899f77bea3fdcb74"
+    },
+    {
+      "path": "ARCHITECTURE.puml",
+      "sha256": "f4b83ddfd4a345d349ec6d9bfd80195423bbee1e1601247384c3c984b0655ae7"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "f4e4b5428a27d25087d5cf516981318eead706cd2f76441ae6d54573cbd81a56"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f9cf630d499463c9fdf9f7da51a882f9ac67539c5440c01e92bc7c0fa6fc8c4f"
+    },
+    {
+      "path": "package.json",
+      "sha256": "143a05bce2f5ef6ade3520c2724b3c89dcefa60c6e9e951aab4e0e3ad464779a"
+    },
+    {
+      "path": "scripts/public-health-check.mjs",
+      "sha256": "45ba14022bed08ccda75cc71dfda23ca495c9802ce1a4a8ad4c3523cedc32066"
+    },
+    {
+      "path": "site/assets/open-art-register-logo.png",
+      "sha256": "eeb60a496142112d517db2ad32bb05c4cb01c1a9d2bf8d2d172c55293a579504"
+    },
+    {
+      "path": "site/example-statistics.html",
+      "sha256": "d7ed34b36359282c4c14f95a88dd113587af02323fdac95253a02955d89eaf14"
+    },
+    {
+      "path": "site/i18n.js",
+      "sha256": "b84ee7ffcb69849596a5a13ff54f066161049d6abec5d7b507ce35affc4abf95"
+    },
+    {
+      "path": "site/index.html",
+      "sha256": "b138bc30ee75b25ea9578eb9b0c295a10a4c160311468156aceafbc4aecd0d39"
+    },
+    {
+      "path": "site/styles.css",
+      "sha256": "d9c7630731179bf07f9e36b71ae4af2aa6da984296d611c4caaee0ff8bb51025"
+    },
+    {
+      "path": "tests/demo-ui.test.mjs",
+      "sha256": "03a1aa5a4c28f2d3d0591bf24cd12b98e2a23223dca6f4f3b05cd8b6b4fc3402"
+    },
+    {
+      "path": "tests/public-boundary.test.mjs",
+      "sha256": "17c8da990013d520c6e880000051c5fa97719b9c1c285554b08a76a677a91588"
+    },
+    {
+      "path": "tests/public-health-contract.test.mjs",
+      "sha256": "f859e28f34c5ce22923f6df8c6c7078c2570372a29f67f2db5613ff0cdbe5254"
+    }
+  ],
+  "pendingPublicDocumentationFiles": [],
+  "visualDerivationBaseline": {
+    "policy": "DERIVED_ONLY",
+    "sourceFileCount": 6,
+    "sourceSha256": {
+      "index.html": "4732d7a97478762bb3d1e179f0bec5fc94b0187ad1bc2c39b9114cb3e69fac49",
+      "styles.css": "eac7fe2bf7ed7b70c13df35825cdd5549a8b7d088399983df5fa7afcd913e69c",
+      "app/02-i18n.js": "3a41b0ce12cbdc7ad055aa900c74fecd2b8f9c1860b4c6391b18aa960b7c7c9a",
+      "app/08-statistics.js": "01f2e19b52b55d12a992aa2435752a08a59fab41fff41e15642a72411364b38c",
+      "app/11-init.js": "edba80d0f84adf4f26ef933e72967d88a946c83872164af3c6ff5dfdf6782a7a",
+      "assets/open-art-register-logo.png": "eeb60a496142112d517db2ad32bb05c4cb01c1a9d2bf8d2d172c55293a579504"
+    },
+    "directProductionSourcePublication": false
+  },
+  "approvedVisualVersion": "V7",
+  "publicFileAllowlistCount": 16
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Open Art Register – Public Demo</title>
+  <link rel="icon" type="image/png" href="./assets/open-art-register-logo.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./i18n.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero__main">
+        <img class="brand-logo brand-logo--hero" src="./assets/open-art-register-logo.png" alt="" aria-hidden="true" />
+        <p class="eyebrow" data-i18n="eyebrow">Open Art Register</p>
+        <h1 data-i18n="title">Ein Fundort für künstlerische Praxis.</h1>
+        <p class="hero-copy" data-i18n="subtitle">Ein zweisprachiges, nicht-kommerzielles Künstlerregister für Selbstauskunft, Sichtbarkeit, Suche und geschützte Statistik künstlerischer Praxis.</p>
+        <div class="hero-actions" aria-label="Deaktivierte Demoaktionen">
+          <button class="button primary" type="button" disabled data-i18n="ctaSearch">Register</button>
+          <button class="button" type="button" disabled data-i18n="ctaRules">Betriebshinweise</button>
+          <button class="button" type="button" disabled data-i18n="ctaRegister">Profil bearbeiten</button>
+          <button class="button" type="button" disabled data-i18n="login">Anmelden</button>
+          <button class="button" type="button" disabled data-i18n="createAccount">Registrieren</button>
+        </div>
+        <div class="account-status account-status--warning" role="status">
+          <span data-i18n="accountLoggedOut">Du bist noch nicht angemeldet. Du kannst öffentliche Inhalte ansehen und deine Angaben vorbereiten.</span>
+          <button class="inline-auth-link" type="button" disabled data-i18n="loginQuestion">Anmelden?</button>
+          <button class="inline-auth-link" type="button" disabled data-i18n="registerQuestion">Registrieren</button>
+        </div>
+      </div>
+      <nav class="top-controls" aria-label="Language selection">
+        <div class="top-controls__row">
+          <div class="segmented-control" aria-label="Language">
+            <button id="langDeBtn" class="tiny is-active" type="button" data-lang="de" aria-pressed="true">DE</button>
+            <button id="langEnBtn" class="tiny" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <button class="tiny" type="button" disabled data-i18n="themeDark">Dunkel</button>
+          <button class="tiny" type="button" disabled data-i18n="infoBtn">Info</button>
+        </div>
+        <button class="tiny accessibility-toggle" type="button" disabled data-i18n="accessibilityBtn">Barrierefreiheit</button>
+      </nav>
+    </header>
+
+    <div class="demo-tape demo-tape--shared" role="note">
+      <div class="demo-tape__track">
+        <span data-i18n="demoTape">DEMOANSICHT · SIE KÖNNEN HIER NUR DE / EN AUSWÄHLEN</span>
+        <span aria-hidden="true" data-i18n="demoTape">DEMOANSICHT · SIE KÖNNEN HIER NUR DE / EN AUSWÄHLEN</span>
+        <span aria-hidden="true" data-i18n="demoTape">DEMOANSICHT · SIE KÖNNEN HIER NUR DE / EN AUSWÄHLEN</span>
+      </div>
+    </div>
+
+    <main class="workspace">
+      <section class="card manifesto-card wide-card">
+        <div class="section-title">
+          <div><p class="kicker" data-i18n="principleKicker">Leitgedanke</p><h2 data-i18n="principleTitle">Das Register entscheidet nicht, wer Künstler-/in ist.</h2></div>
+          <span class="version-pill" data-i18n="pilotPill">Pilotbetrieb · begrenzte Profilzahl</span>
+        </div>
+        <p data-i18n="principleText">Es dokumentiert künstlerische Praxis auf Basis von Selbstauskunft. Es gibt keine Jury, keine Qualitätsbewertung und keine Aufnahmeprüfung.</p>
+        <div class="principle-grid">
+          <article><strong data-i18n="pOpenTitle">Offenheit</strong><span data-i18n="pOpenText">Die Registrierung ist kostenlos. In der Pilotphase ist sie ab 16 Jahren möglich; für 16- und 17-Jährige ist die Zustimmung einer sorgeberechtigten Person erforderlich. Ein Geburtsdatum wird dafür nicht erhoben. Registrierte Personen steuern selbst, was sichtbar wird.</span></article>
+          <article><strong data-i18n="pVolTitle">Freiwilligkeit</strong><span data-i18n="pVolText">Öffentliche Sichtbarkeit, Suche und Statistik können getrennt gesteuert werden.</span></article>
+          <article><strong data-i18n="pNoJuryTitle">Keine Bewertung</strong><span data-i18n="pNoJuryText">Das Register misst nicht Qualität, Erfolg oder Bedeutung.</span></article>
+          <article><strong data-i18n="pResearchTitle">Schutzlogik</strong><span data-i18n="pResearchText">Statistik erscheint nur aggregiert und erst bei ausreichend großen Gruppen.</span></article>
+        </div>
+      </section>
+
+      <section class="card input-card">
+        <div class="section-title">
+          <div><p class="kicker" data-i18n="registerKicker">1 · Selbstauskunft</p><h2 data-i18n="registerTitle">Profil bearbeiten</h2></div>
+          <button class="tiny ghost" type="button" disabled data-i18n="toggleRegisterOpen">Selbstauskunft öffnen</button>
+        </div>
+      </section>
+
+      <section class="card stats-card">
+        <div class="section-title"><div><p class="kicker" data-i18n="statsKicker">2 · Empirie</p><h2 data-i18n="statsTitle">Aggregierte Übersicht</h2></div></div>
+        <div class="stats-grid">
+          <div class="stat-card"><strong data-i18n="protectedValue">Geschützt</strong><span data-i18n="statsEligibleProfiles">Insgesamt zugestimmte Statistikprofile</span></div>
+          <div class="stat-card"><strong>50</strong><span data-i18n="minForStats">Mindestprofile für Detailstatistik</span></div>
+        </div>
+        <div class="chart-list">
+          <section class="stats-placeholder" aria-label="Statistik noch geschützt">
+            <div class="stats-placeholder__visual">
+              <div class="stats-placeholder__ring"><span>≥50</span></div>
+              <div class="stats-placeholder__copy">
+                <h3 data-i18n="statsLockedTitle">Statistik noch geschützt</h3>
+                <p class="muted" data-i18n="statsLockedText">Statistiken werden erst ab 50 zugestimmten Statistikprofilen unterstützt.</p>
+                <p class="muted" data-i18n="statsRequestText">Der Statistikexport ist auf die in der aggregierten Übersicht sichtbaren Daten begrenzt. Weitere statistische Erhebungen werden nur nach begründeter Anfrage zugänglich gemacht.</p>
+                <p class="muted" data-i18n="aggregationPolicyText">Aggregierte öffentliche Statistik erst ab 50 zugestimmten Statistikprofilen; keine Einzelwerte für Gruppen unter 5; nur freigegebene kontrollierte Statistikfelder.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="card directory-card wide-card">
+        <div class="section-title"><div><p class="kicker" data-i18n="directoryKicker">3 · Fundort</p><h2 data-i18n="directoryTitle">Praxis finden</h2></div></div>
+        <p class="hint" data-i18n="directoryHint">Öffentliche Profile werden alphabetisch angezeigt. Suche und Filter verfeinern die Liste.</p>
+        <div class="directory-actions"><button class="primary" type="button" disabled data-i18n="showResults">Ergebnisse anzeigen</button></div>
+        <div class="directory-search-panel">
+          <div class="directory-search-row"><input disabled data-i18n-placeholder="searchPlaceholder" placeholder="Name, Schlagwort, Ort, Disziplin, Praxis oder Kontaktziel …" /><button class="primary" type="button" disabled data-i18n="search">Suchen</button></div>
+          <div class="directory-filter-row"><select disabled><option data-i18n="allLevels">Alle Praxisformen</option></select><select disabled><option data-i18n="allDisciplines">Alle Disziplinen</option></select><select disabled><option data-i18n="allStatus">Alle Praxisaktivitäten</option></select><select disabled><option data-i18n="allOpenTo">Alle Kontaktziele</option></select></div>
+        </div>
+      </section>
+
+      <section class="card bookmark-card-section wide-card">
+        <div class="section-title"><div><p class="kicker" data-i18n="bookmarkKicker">4 · Merkliste</p><h2 data-i18n="bookmarkTitle">Meine private Merkliste</h2></div><span class="version-pill"><span data-i18n="bookmarkCountLabel">Einträge</span>: 0 / 5</span></div>
+        <p class="hint" data-i18n="bookmarkHint">Du kannst bis zu 5 öffentliche Profilkarten für dich merken. Die Merkliste ist privat, geht nicht in Statistik ein und erzeugt keine Bewertung oder Rangliste.</p>
+        <p class="static-note" data-i18n="bookmarkPrivacyNote">Ein Eintrag entfernt nur deinen eigenen Merkliste-Bezug. Es wird kein Profil gelöscht, gemeldet, blockiert oder statistisch bewertet.</p>
+      </section>
+
+      <section class="card governance-card wide-card">
+        <div class="section-title"><div><p class="kicker" data-i18n="governanceKicker">5 · Betrieb, Sicherheit und Transparenz</p><h2 data-i18n="governanceTitle">Nutzungsbedingungen, Datenschutz und technische Schutzgrenzen</h2></div></div>
+        <div class="governance-grid">
+          <article><h3 data-i18n="gPrivacyTitle">Nutzungsbedingungen und Datenschutz</h3><p data-i18n="gPrivacyText">Du entscheidest getrennt, was sichtbar wird, was in der Suche erscheint und was nur zusammengefasst in Statistiken eingeht.</p></article>
+          <article><h3 data-i18n="gResearchTitle">Forschung</h3><p data-i18n="gResearchText">Die freiwillige Sichtbarmachung künstlerischer Arbeit in statistischer Form ist eine zweite Zielsetzung des Registers.</p></article>
+          <article><h3 data-i18n="gProjectTitle">Datenbankbasiertes Register</h3><p data-i18n="gProjectText">Im Mittelpunkt stehen strukturierte Angaben dazu, wie künstlerische Praxis sichtbar und auffindbar wird.</p></article>
+          <article><h3 data-i18n="gAccessibilityTitle">Barrierefreiheit</h3><p data-i18n="gAccessibilityText">Diese Version enthält Hinweise für Tastatur, Fokus, Formularlabels und Statusmeldungen.</p></article>
+        </div>
+        <section class="governance-subsection trust-transparency">
+          <div class="trust-transparency__header"><p class="kicker" data-i18n="trustKicker">Sicherheit und Transparenz</p><h3 data-i18n="trustTitle">Technische Schutzgrenzen offen erklärt</h3><p class="trust-transparency__intro" data-i18n="trustIntro">Diese Angaben beschreiben den technischen Stand und sind keine unabhängige Zertifizierung.</p></div>
+          <div class="governance-grid trust-transparency__grid">
+            <article><h4 data-i18n="trustHttpsTitle">Verschlüsselte Verbindung</h4><p data-i18n="trustHttpsText">Die Website wird über HTTPS übertragen.</p></article>
+            <article><h4 data-i18n="trustPermissionsTitle">Rechte bleiben serverseitig</h4><p data-i18n="trustPermissionsText">Der Browser entscheidet keine Rollen oder Zugriffsrechte und greift nicht direkt auf die Datenbank zu.</p></article>
+            <article><h4 data-i18n="trustChoicesTitle">Getrennte Freigaben</h4><p data-i18n="trustChoicesText">Öffentliche Sichtbarkeit, Suche und Statistik bleiben getrennte Entscheidungen.</p></article>
+            <article><h4 data-i18n="trustEvidenceTitle">Technische Nachweise</h4><p data-i18n="trustEvidenceText">Diese öffentliche Demo zeigt nur ausdrücklich freigegebene Nachweise und keine produktive Anwendungslogik.</p></article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer><span data-i18n="footerText">Open Art Register · Nicht-kommerzielles Künstlerregister.</span><span>© 2026 Jeremias Erdogan · contact@openartregister.art · jerdogan.art</span></footer>
+  </div>
+</body>
+</html>
