@@ -9,6 +9,7 @@ const ALLOWED = new Set([
   'ARCHITECTURE.puml',
   'LICENSE',
   '.github/workflows/public-health.yml',
+  '.github/workflows/public-pages.yml',
   'README.md',
   'package.json',
   'public-manifest.json',
@@ -60,14 +61,52 @@ test('manifest hashes every public payload file except itself', async () => {
   }
 });
 
-test('manifest declares the final 16-file public alignment with no screenshot placeholders', async () => {
+test('manifest preserves the 16-file base and declares the 17-file Pages extension', async () => {
   const manifest = JSON.parse(await readFile('public-manifest.json', 'utf8'));
   const actual = await walk('.');
-  assert.equal(actual.length, 16);
-  assert.equal(manifest.publicFileAllowlistCount, 16);
+  assert.equal(actual.length, 17);
+  assert.equal(manifest.basePublicFileAllowlistCount, 16);
+  assert.equal(manifest.publicFileAllowlistCount, 17);
   assert.equal(manifest.claims.publicFileAlignmentComplete, true);
   assert.equal(manifest.claims.documentationScreenshotsIncluded, false);
+  assert.equal(manifest.claims.pagesExtensionV1, true);
+  assert.equal(manifest.claims.pagesWorkflowManualOnly, true);
+  assert.equal(manifest.claims.pagesDeploymentSourceSiteOnly, true);
   assert.equal(manifest.approvedVisualVersion, 'V7');
   assert.deepEqual(manifest.pendingPublicDocumentationFiles, []);
+  assert.equal(manifest.pagesExtension.version, 'V1');
+  assert.equal(manifest.pagesExtension.workflowPath, '.github/workflows/public-pages.yml');
+  assert.equal(manifest.pagesExtension.deploymentSourceDirectory, 'site');
+  assert.equal(manifest.pagesExtension.deploymentFileCount, 5);
+  assert.deepEqual(manifest.pagesExtension.deploymentFiles, [
+    'site/assets/open-art-register-logo.png',
+    'site/example-statistics.html',
+    'site/i18n.js',
+    'site/index.html',
+    'site/styles.css'
+  ]);
+  assert.deepEqual(manifest.pagesExtension.workflowTriggers, ['workflow_dispatch']);
+  assert.equal(manifest.pagesExtension.activationRequiresSeparateApproval, true);
+  assert.equal(manifest.pagesExtension.healthWorkflowUnchanged, true);
   assert.equal('gitTransparency18FileAlignmentComplete' in manifest.claims, false);
+});
+
+test('Pages workflow is manual-only and uploads only the site directory', async () => {
+  const workflow = await readFile('.github/workflows/public-pages.yml', 'utf8');
+
+  assert.match(workflow, /^on:\n  workflow_dispatch:\s*$/m);
+  assert.doesNotMatch(workflow, /^\s{2}push:/m);
+  assert.doesNotMatch(workflow, /^\s{2}schedule:/m);
+  assert.match(workflow, /run:\s*npm test/);
+  assert.match(workflow, /persist-credentials:\s*false/);
+  assert.match(workflow, /uses:\s*actions\/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1/);
+  assert.match(workflow, /uses:\s*actions\/setup-node@820762786026740c76f36085b0efc47a31fe5020/);
+  assert.match(workflow, /uses:\s*actions\/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b/);
+  assert.match(workflow, /uses:\s*actions\/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b/);
+  assert.match(workflow, /uses:\s*actions\/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e/);
+  assert.match(workflow, /^\s{10}path:\s*site\s*$/m);
+  assert.doesNotMatch(workflow, /^\s{10}path:\s*[.'"]+\s*$/m);
+  assert.match(workflow, /^\s{4}needs:\s*build\s*$/m);
+  assert.match(workflow, /^\s{6}pages:\s*write\s*$/m);
+  assert.match(workflow, /^\s{6}id-token:\s*write\s*$/m);
 });

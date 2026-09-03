@@ -1,7 +1,7 @@
 {
   "id": "OAR_PUBLIC_DEMO_EVIDENCE_V1",
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T22:41:38+02:00",
+  "generatedAt": "2026-09-03T06:24:43+02:00",
   "claims": {
     "completeProductionSourceIncluded": false,
     "productionApplicationLogicIncluded": false,
@@ -26,7 +26,10 @@
     "demoTapeViewportFixed": true,
     "demoTapeScrollsWithDocument": false,
     "publicFileAlignmentComplete": true,
-    "documentationScreenshotsIncluded": false
+    "documentationScreenshotsIncluded": false,
+    "pagesExtensionV1": true,
+    "pagesWorkflowManualOnly": true,
+    "pagesDeploymentSourceSiteOnly": true
   },
   "publicHealthProbe": {
     "method": "GET",
@@ -45,6 +48,10 @@
     {
       "path": ".github/workflows/public-health.yml",
       "sha256": "bb06631cad89ffb1a656e81bac0781c503e76a7ee03d2878f33150e825b05624"
+    },
+    {
+      "path": ".github/workflows/public-pages.yml",
+      "sha256": "212f35dee335dc29aa7888ce8fd43959cc2bd0280cc00a866d153e34ed1f4285"
     },
     {
       "path": ".gitignore",
@@ -96,7 +103,7 @@
     },
     {
       "path": "tests/public-boundary.test.mjs",
-      "sha256": "17c8da990013d520c6e880000051c5fa97719b9c1c285554b08a76a677a91588"
+      "sha256": "8f7a37287cb961b87c41a53fb484aa4b856671201631cf73750958a465c694c7"
     },
     {
       "path": "tests/public-health-contract.test.mjs",
@@ -118,5 +125,24 @@
     "directProductionSourcePublication": false
   },
   "approvedVisualVersion": "V7",
-  "publicFileAllowlistCount": 16
+  "publicFileAllowlistCount": 17,
+  "basePublicFileAllowlistCount": 16,
+  "pagesExtension": {
+    "version": "V1",
+    "workflowPath": ".github/workflows/public-pages.yml",
+    "deploymentSourceDirectory": "site",
+    "deploymentFileCount": 5,
+    "deploymentFiles": [
+      "site/assets/open-art-register-logo.png",
+      "site/example-statistics.html",
+      "site/i18n.js",
+      "site/index.html",
+      "site/styles.css"
+    ],
+    "workflowTriggers": [
+      "workflow_dispatch"
+    ],
+    "activationRequiresSeparateApproval": true,
+    "healthWorkflowUnchanged": true
+  }
 }
