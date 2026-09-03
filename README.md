@@ -31,6 +31,16 @@ Tätigkeitsbereiche, Themen und Arbeitsweisen können nebeneinander bestehen.
 Die Einordnung der eigenen künstlerischen Praxis verbleibt bei der jeweiligen
 Person.
 
+Die Demonstration gibt einen Überblick über die bereits auf Open Art Register
+umgesetzten Funktionen und deren Darstellung.
+
+Auf der Demonstrationsseite selbst können Besucher keine Formularfelder
+ausfüllen und keine produktiven Aktionen auslösen. Die automatisierten Tests
+des öffentlichen Repositories bleiben davon unberührt und können die
+vorgesehenen technischen Eigenschaften der Demonstration überprüfen.
+
+[Demonstration ansehen](https://jerd0gan.github.io/open-art-register-evidence/)
+
 ### Strukturierte Auffindbarkeit
 
 Open Art Register ersetzt keine eigene Webseite, kein Portfolio und keine
@@ -83,6 +93,12 @@ unwichtig ist.
 
 Sie beschreibt ausschließlich, was innerhalb des Registers tatsächlich
 angegeben und für diese Form der Betrachtung freigegeben wurde.
+
+Die Statistik-Demonstration zeigt beispielhaft die bereits auf Open Art Register
+umgesetzte statistische Darstellung. Die dort verwendeten Werte sind
+ausschließlich synthetische Beispieldaten.
+
+[Statistik-Demonstration ansehen](https://jerd0gan.github.io/open-art-register-evidence/example-statistics.html)
 
 ### Unterschiedliche Nutzungsarten derselben Information
 
@@ -306,6 +322,16 @@ Different fields, subjects and working methods may exist alongside each other.
 The classification of an artistic practice remains with the person providing
 the information.
 
+The demonstration provides an overview of the functions already implemented
+in Open Art Register and how they are presented.
+
+On the demonstration page itself, visitors cannot fill in form fields or
+trigger production actions. This does not affect the automated tests in the
+public repository, which can verify the intended technical properties of the
+demonstration.
+
+[View demonstration](https://jerd0gan.github.io/open-art-register-evidence/)
+
 ### Structured discoverability
 
 Open Art Register does not replace an artist's own website, portfolio or social
@@ -357,6 +383,12 @@ unimportant.
 
 They describe only information that has actually been provided within the
 register and made available for this form of analysis.
+
+The statistics demonstration provides an example of the statistical
+presentation already implemented in Open Art Register. All values shown there
+are synthetic example data.
+
+[View statistics demonstration](https://jerd0gan.github.io/open-art-register-evidence/example-statistics.html)
 
 ### Different uses of the same information
 
